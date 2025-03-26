@@ -1,0 +1,11 @@
+soil_type,rainfall,temperature,crop
+Loam,200,25,Wheat
+Clay,150,30,Rice
+Sandy,100,35,Maize
+Loam,220,24,Wheat
+Clay,140,32,Rice
+Sandy,90,36,Maize
+Loam,210,22,Wheat
+Clay,160,28,Rice
+Sandy,120,34,Maize
+Loam,230,23,Wheat

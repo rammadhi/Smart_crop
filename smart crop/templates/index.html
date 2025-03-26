@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Prediction and Trade</title>
+    <!-- Link to CSS using Flask's url_for -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!-- Link the header image using Flask's url_for -->
+            <img src="{{ url_for('static', filename='header-image.jpg') }}" alt="Farm Image" class="header-image">
+            <h1>🌾 Crop Prediction and Trading System</h1>
+            <p>Helping farmers grow and trade crops efficiently with AI.</p>
+        </header>
+
+        <div class="form-section">
+            <div class="form-container">
+                <h2>Predict Crop</h2>
+                <form id="predict-form">
+                    <label for="features">Enter Features (comma separated):</label>
+                    <input type="text" id="features" name="features" placeholder="e.g., soil type, temperature, rainfall" required>
+                    <button type="submit" class="btn">Predict</button>
+                </form>
+                <div id="prediction-result"></div>
+            </div>
+
+            <div class="form-container">
+                <h2>Trade Crop</h2>
+                <form id="trade-form">
+                    <label for="crop">Crop:</label>
+                    <input type="text" id="crop" name="crop" placeholder="e.g., Wheat" required>
+                    <label for="quantity">Quantity (kg):</label>
+                    <input type="number" id="quantity" name="quantity" placeholder="e.g., 500" required>
+                    <label for="price">Price (₹ per kg):</label>
+                    <input type="number" id="price" name="price" placeholder="e.g., 25" required>
+                    <button type="submit" class="btn">Trade</button>
+                </form>
+                <div id="trade-result"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Crop Prediction and Trading System. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Link JavaScript file using Flask's url_for -->
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
